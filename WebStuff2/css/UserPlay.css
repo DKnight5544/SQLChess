@@ -1,0 +1,113 @@
+﻿
+
+body {
+    position: relative;
+    background-color: white;
+}
+
+#HideContainer {
+    display: none;
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#ChessBoardTable {
+    border-collapse: collapse;
+    border: 15px solid;
+}
+
+td {
+    border-width: 1px;
+    border-style: solid;
+    border-color: darkgray;
+    width: 75px;
+    height: 75px;
+    overflow: hidden;
+}
+
+.light {
+    background-color: white;
+}
+
+.dark {
+    background-color: grey;
+}
+
+.ic {
+    width: 75px;
+    height: 75px;
+    overflow: hidden;
+}
+
+img {
+    width: 500px;
+    height: 125px;
+    cursor: pointer;
+}
+
+.white {
+    margin-top: 10px;
+}
+
+.black {
+    margin-top: -58px;
+}
+
+.r {
+    margin-left: 10px;
+}
+
+.n {
+    margin-left: -62px;
+}
+
+.b {
+    margin-left: -138px;
+}
+
+.k {
+    margin-left: -214px;
+}
+
+.q {
+    margin-left: -288px;
+}
+
+.p {
+    margin-left: -442px;
+}
+
+.hide {
+    margin-left: -1000px;
+    margin-top: -1000px;
+}
+
+#LeftDiv{
+    width:700px;
+    height:700px;
+    float:left;
+}
+
+#RightDiv{
+    width:400px;
+    float:left;
+}
+
+#MessageBoard {
+    border-collapse:collapse;
+    border:none;
+}
+
+.MessageBoardRow {
+}
+
+.MessageBoardCol {
+    width: 400px;
+    height:50px;
+    text-align:center;
+    font-family:sans-serif;
+    background-color:lightgray;
+    color:white;
+    border:none;
+}

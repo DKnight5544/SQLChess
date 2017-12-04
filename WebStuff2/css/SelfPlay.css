@@ -1,0 +1,44 @@
+﻿body {
+    margin: 0px;
+    padding:0px;
+    font-family:sans-serif;
+}
+
+table{
+    margin-top:10px;
+    margin-left:10px;
+    border-collapse:collapse;
+    border:2px solid black;
+    width:338px;
+}
+
+td{
+    border:1px dashed grey;
+    padding:5px;
+}
+
+.KeyColumn{
+
+}
+
+.ValueColumn{
+    text-align: right;
+}
+
+.TableHeader{
+    text-align:center;
+    background-color:black;
+    color:white;
+    font-weight:bold;
+}
+
+#Messages{
+    margin-top:10px;
+    margin-left:10px;
+    height: 200px;
+    width: 325px;
+    padding:5px;
+    border:2px solid black;
+    overflow-y:scroll;
+    float:left;
+}

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DWKDB" Class="DWKDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ie0p1a01o5.database.windows.net;Initial Catalog=DWKDB;User ID=TimerAppUser" SettingsObjectName="SQLChess.PlayerAndEngines.Properties.Settings" SettingsPropertyName="DWKDBConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="chess.GetBestMove" Method="GetBestMove">
+    <Parameter Name="Moves" Parameter="moves" Type="System.String" DbType="VarChar(MAX)" />
+    <ElementType Name="GetBestMoveResult">
+      <Column Name="BestMove" Type="System.String" DbType="Char(64)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="chess.SaveGame" Method="SaveGame">
+    <Parameter Name="Moves" Parameter="moves" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="GameID" Parameter="gameID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="chess.GetNewGame" Method="GetNewGame">
+    <Parameter Name="SelfPlay" Parameter="selfPlay" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="GetNewGameResult">
+      <Column Name="GameID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WebID" Type="System.String" DbType="Char(36)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

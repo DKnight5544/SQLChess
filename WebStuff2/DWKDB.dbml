@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DWKDB" Class="DWKDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=ie0p1a01o5.database.windows.net;Initial Catalog=DWKDB;User ID=TimerAppUser" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="DWKDBConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="chess.GetNewGame" Method="GetNewGame">
+    <Parameter Name="SelfPlay" Parameter="selfPlay" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="GetNewGameResult">
+      <Column Name="GameID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WebID" Type="System.String" DbType="Char(36)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="chess.GetBestMove" Method="GetBestMove">
+    <Parameter Name="Moves" Parameter="moves" Type="System.String" DbType="VarChar(MAX)" />
+    <ElementType Name="GetBestMoveResult">
+      <Column Name="BestMove" Type="System.String" DbType="Char(64)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="chess.GetGameByGameID" Method="GetGameByGameID">
+    <Parameter Name="GameID" Parameter="gameID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetGameByGameIDResult">
+      <Column Name="MoveID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Board" Type="System.String" DbType="Char(64) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="chess.GetLastGame" Method="GetLastGame">
+    <ElementType Name="GetLastGameResult">
+      <Column Name="MoveID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Board" Type="System.String" DbType="Char(64) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="chess.GetNewGame" Method="GetNewGame1">
+    <Parameter Name="SelfPlay" Parameter="selfPlay" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="GetNewGameResult1">
+      <Column Name="GameID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WebID" Type="System.String" DbType="Char(36)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="chess.GetSelfGameStats" Method="GetSelfGameStats">
+    <ElementType Name="GetSelfGameStatsResult">
+      <Column Name="MinimumDuration" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AverageDuration" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaximumDuration" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MinimumMoveCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AverageMoveCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaximumMoveCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CheckmateCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaxGameID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="chess.SaveGame" Method="SaveGame">
+    <Parameter Name="Moves" Parameter="moves" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="GameID" Parameter="gameID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="chess.GetGameByWebID" Method="GetGameByWebID">
+    <Parameter Name="WebID" Parameter="webID" Type="System.String" DbType="Char(36)" />
+    <ElementType Name="GetGameByWebIDResult">
+      <Column Name="MoveID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GameID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Board" Type="System.String" DbType="Char(64) NOT NULL" CanBeNull="false" />
+      <Column Name="WebID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="MoveNum" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Color" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="chess.SaveMove" Method="SaveMove">
+    <Parameter Name="WebID" Parameter="webID" Type="System.String" DbType="Char(36)" />
+    <Parameter Name="Board" Parameter="board" Type="System.String" DbType="Char(64)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="chess.SaveGameByWebID" Method="SaveGameByWebID">
+    <Parameter Name="WebID" Parameter="webID" Type="System.String" DbType="Char(36)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>
