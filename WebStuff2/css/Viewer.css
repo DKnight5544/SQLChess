@@ -6,7 +6,7 @@ body {
 }
 
 #ControlsTable{
-    margin-top:30px;
+    margin-top:60px;
     margin-left: auto;
     margin-right: auto;
     border-collapse: collapse;
@@ -63,7 +63,9 @@ body {
     border:15px solid;
 }
 
-td {
+
+.light {
+    background-color: white;
     border-width: 1px;
     border-style: solid;
     border-color: darkgray;
@@ -72,12 +74,14 @@ td {
     overflow: hidden;
 }
 
-.light {
-    background-color: white;
-}
-
 .dark {
     background-color: grey;
+    border-width: 1px;
+    border-style: solid;
+    border-color: darkgray;
+    width: 75px;
+    height: 75px;
+    overflow: hidden;
 }
 
 .ic {

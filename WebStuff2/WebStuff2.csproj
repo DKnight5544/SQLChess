@@ -82,6 +82,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\Header.css" />
     <Content Include="css\Viewer.css" />
     <Content Include="css\UserPlay.css" />
     <Content Include="css\Default.css" />

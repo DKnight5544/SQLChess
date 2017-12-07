@@ -3,137 +3,146 @@
 <head>
     <title>SQLChess-UserPlay</title>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/Header.css" />
     <link rel="stylesheet" href="css/UserPlay.css" />
     <script src="js/UserPlay.js"></script>
 </head>
+
 <body onload="body_onload();" onsubmit="return false;">
 
-    <div>
-        <button onclick="getNewGame(this, 'White');">I'll Play White</button>
-        <button onclick="getNewGame(this, 'Black');">I'll Play Black</button>
-    </div>
-
-    <div id="HideContainer">
-
-        <div id="LeftDiv">
-            <table id="ChessBoardTable">
-                <tr>
-                    <td id="57" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="58" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="59" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="60" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="61" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="62" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="63" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="64" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                </tr>
-                <tr>
-                    <td id="49" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="50" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="51" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="52" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="53" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="54" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="55" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="56" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                </tr>
-                <tr>
-                    <td id="41" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="42" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="43" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="44" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="45" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="46" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="47" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="48" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                </tr>
-                <tr>
-                    <td id="33" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="34" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="35" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="36" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="37" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="38" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="39" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="40" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                </tr>
-                <tr>
-                    <td id="25" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="26" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="27" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="28" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="29" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="30" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="31" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="32" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                </tr>
-                <tr>
-                    <td id="17" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="18" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="19" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="20" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="21" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="22" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="23" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="24" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                </tr>
-                <tr>
-                    <td id="9" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="10" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="11" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="12" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="13" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="14" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="15" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="16" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                </tr>
-                <tr>
-                    <td id="1" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="2" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="3" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="4" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="5" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="6" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="7" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                    <td id="8" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
-                </tr>
-
-            </table>
+        <div id="basicHeader">
+            SQLChess
         </div>
 
-        <div id="RightDiv">
-            <table id="MessageBoard">
-                <tr class="MessageBoardRow">
-                    <td id="Ind_YourMove" class="MessageBoardCol">YOUR MOVE</td>
-                </tr>
-                <tr class="MessageBoardRow">
-                    <td id="Ind_IllegalMove" class="MessageBoardCol">ILLEGAL MOVE</td>
-                </tr>
-                <tr class="MessageBoardRow">
-                    <td id="Ind_Check" class="MessageBoardCol">CHECK</td>
-                </tr>
-                <tr class="MessageBoardRow">
-                    <td id="Ind_CheckmateWhite" class="MessageBoardCol">CHECKMATE: White Wins</td>
-                </tr>
-                <tr class="MessageBoardRow">
-                    <td id="Ind_CheckmateBlack" class="MessageBoardCol">CHECKMATE: Black Wins</td>
-                </tr>
-                <tr class="MessageBoardRow">
-                    <td id="Ind_StalemateWhite" class="MessageBoardCol">STALEMATE: No Legal Moves for White</td>
-                </tr>
-                <tr class="MessageBoardRow">
-                    <td id="Ind_StalemateBlack" class="MessageBoardCol">STALEMATE: No Legal Moves for Black</td>
-                </tr>
-                <tr class="MessageBoardRow">
-                    <td id="Ind_Stalemate50MoveRule" class="MessageBoardCol">STALEMATE: 50 Move Rule</td>
-                </tr>
-                <tr class="MessageBoardRow">
-                    <td id="Ind_StalemateNotEnoughPieces" class="MessageBoardCol">STALEMATE: Not Enough Pieces</td>
-                </tr>
-            </table>
+        <table id="pageMenu">
+            <tr>
+                <td class="pageButton" onclick="getNewGame(this, 'White');">I'll Play White</td>
+                <td class="pageButton" onclick="getNewGame(this, 'Black');">I'll Play Black</td>
+                <td class="pageButton last">&nbsp;</td>
+            </tr>
+        </table>
+
+        <div id="HideContainer">
+
+            <div id="LeftDiv">
+                <table id="ChessBoardTable">
+                    <tr>
+                        <td id="57" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="58" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="59" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="60" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="61" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="62" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="63" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="64" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                    </tr>
+                    <tr>
+                        <td id="49" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="50" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="51" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="52" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="53" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="54" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="55" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="56" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                    </tr>
+                    <tr>
+                        <td id="41" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="42" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="43" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="44" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="45" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="46" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="47" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="48" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                    </tr>
+                    <tr>
+                        <td id="33" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="34" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="35" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="36" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="37" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="38" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="39" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="40" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                    </tr>
+                    <tr>
+                        <td id="25" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="26" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="27" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="28" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="29" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="30" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="31" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="32" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                    </tr>
+                    <tr>
+                        <td id="17" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="18" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="19" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="20" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="21" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="22" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="23" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="24" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                    </tr>
+                    <tr>
+                        <td id="9" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="10" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="11" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="12" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="13" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="14" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="15" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="16" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                    </tr>
+                    <tr>
+                        <td id="1" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="2" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="3" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="4" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="5" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="6" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="7" class="light" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                        <td id="8" class="dark" onclick="pieceClicked(this);"><div class="ic"><img src="images/Chess-Pieces.png" /></div></td>
+                    </tr>
+
+                </table>
+            </div>
+
+            <div id="RightDiv">
+                <table id="MessageBoard">
+                    <tr class="MessageBoardRow">
+                        <td id="Ind_YourMove" class="MessageBoardCol">YOUR MOVE</td>
+                    </tr>
+                    <tr class="MessageBoardRow">
+                        <td id="Ind_IllegalMove" class="MessageBoardCol">ILLEGAL MOVE</td>
+                    </tr>
+                    <tr class="MessageBoardRow">
+                        <td id="Ind_Check" class="MessageBoardCol">CHECK</td>
+                    </tr>
+                    <tr class="MessageBoardRow">
+                        <td id="Ind_CheckmateWhite" class="MessageBoardCol">CHECKMATE: White Wins</td>
+                    </tr>
+                    <tr class="MessageBoardRow">
+                        <td id="Ind_CheckmateBlack" class="MessageBoardCol">CHECKMATE: Black Wins</td>
+                    </tr>
+                    <tr class="MessageBoardRow">
+                        <td id="Ind_StalemateWhite" class="MessageBoardCol">STALEMATE: No Legal Moves for White</td>
+                    </tr>
+                    <tr class="MessageBoardRow">
+                        <td id="Ind_StalemateBlack" class="MessageBoardCol">STALEMATE: No Legal Moves for Black</td>
+                    </tr>
+                    <tr class="MessageBoardRow">
+                        <td id="Ind_Stalemate50MoveRule" class="MessageBoardCol">STALEMATE: 50 Move Rule</td>
+                    </tr>
+                    <tr class="MessageBoardRow">
+                        <td id="Ind_StalemateNotEnoughPieces" class="MessageBoardCol">STALEMATE: Not Enough Pieces</td>
+                    </tr>
+                </table>
+            </div>
+
         </div>
 
-    </div>
-
-</body>
+    </body>
 </html>

@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Viewer One</title>
+    <link rel="stylesheet" href="css/Header.css" />
     <link rel="stylesheet" href="css/Viewer.css" />
     <script src="js/Viewer.js"></script>
     <asp:Literal ID="litMoves" runat="server"></asp:Literal>
@@ -13,6 +14,16 @@
 <body onload="body_onload();" onsubmit="return false;">
 
     <form id="form1" runat="server">
+        
+        <div id="basicHeader">
+            SQLChess
+        </div>
+
+<%--        <table id="pageMenu">
+            <tr>
+                <td class="pageButton last">&nbsp;</td>
+            </tr>
+        </table>--%>
 
         <table id="ControlsTable">
             <tr>

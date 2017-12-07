@@ -2,12 +2,28 @@
 <html>
 <head>
     <title>SQLChess</title>
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/Header.css" />
     <link rel="stylesheet" href="css/Default.css" />
     <script src="js/Default.js"></script>
 </head>
 <body>
-    <a href="Viewer.aspx" target="_self">Self Play Viewer</a>
-    <a href="UserPlay.html" target="_self">User Play</a>
+    <div id="basicHeader">
+        SQLChess
+    </div>
+
+    <table id="pageMenu">
+        <tr>
+            <td class="pageButton" onclick="window.location.href = 'Viewer.aspx';">
+                Self Play Viewer
+            </td>
+            <td class="pageButton" onclick="window.location.href = 'UserPlay.html';">
+                User Play
+            </td>
+            <td class="pageButton last">
+                &nbsp;
+            </td>
+        </tr>
+    </table>
 </body>
 </html>
